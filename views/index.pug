@@ -1,0 +1,30 @@
+extends default
+
+block content
+    div.container
+        form(method="post", action="/payment")
+            label(for="pubgUserName") Pubg User Name : 
+            input(id="pubgUserName", type="text", placeholder="Your Answer", name="pubgUserName")
+            br
+            br
+            label(for="pubgUserId") Pubg User Id : 
+            input(id="pubgUserId", type="text", placeholder="Your Answer", name="pubgUserId")
+            br
+            br
+            label(for="emailId") Email-Id : 
+            input(id="emailId", type="text", placeholder="eg-example123@gmail.com", name="emailId")
+            br
+            br
+            label(for="password") Password : 
+            input(id="password", type="password", placeholder="New Password", name="password")
+            br
+            br
+            label(for="confirmPassword") Confirm Password : 
+            input(id="confirmPassword", type="password", placeholder="Re-Enter the Password", name="confirmPassword")
+            br
+            br
+            label(for="mobile") Mobile No. : 
+            input(id="mobile", type="text", placeholder="Your Answer", name="mobile")
+            br
+            br
+            input(type="submit", value="Submit")
