@@ -41,11 +41,12 @@ block content
                     url: '/payment',
                     method: 'put',
                     data: registrationData,
-                    success: function(result, status, xht){
-                        $('#msg').innerHTML = result;
+                    success: function(result, status, xhr){
+                        console.log(result);
+                        console.log(status);
+                        document.getElementById('msg').innerHTML = result.msg;
                     },
                     error: function(xhr, status, error){
-                        console.log('something went wrong');
                         console.log(status);
                         console.log(error);
                     }
