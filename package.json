@@ -1,5 +1,5 @@
 {
-  "name": "pubgproject",
+  "name": "pubgwarfare",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,13 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjun-computer-geek/pubgwarfare.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arjun-computer-geek/pubgwarfare/issues"
+  },
+  "homepage": "https://github.com/arjun-computer-geek/pubgwarfare#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "mysql": "^2.17.1",
     "pug": "^2.0.4"
   },
   "devDependencies": {

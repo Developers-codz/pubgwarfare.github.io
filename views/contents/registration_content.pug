@@ -1,8 +1,8 @@
-extends default
+div(id='content')
+    img(id='pubgLogo' src='pubg1.png')
 
-block content
-    div.container
-        form(id="registration" )
+    div(class='registration')
+        form(action="/registration" method="post")
             label(for="pubgUserName") Pubg User Name : 
             input(id="pubgUserName", type="text", placeholder="Your Answer", name="pubgUserName")
             span(id="msg")
@@ -29,27 +29,3 @@ block content
             br
             br
             input(type="submit", value="Submit")
-
-    script.
-        $(document).ready(function() {
-            $('#registration').on('submit', function(event) {
-                event.preventDefault();
-                const registrationData = $(this).serialize();
-                console.log(registrationData);
-
-                $.ajax({
-                    url: '/payment',
-                    method: 'put',
-                    data: registrationData,
-                    success: function(result, status, xhr){
-                        console.log(result);
-                        console.log(status);
-                        document.getElementById('msg').innerHTML = result.msg;
-                    },
-                    error: function(xhr, status, error){
-                        console.log(status);
-                        console.log(error);
-                    }
-                });
-            })
-        });

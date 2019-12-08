@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('backgroundImage.jpg');
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-attachment: fixed;
+}
+
+#navbar {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    overflow: auto;
+    position: sticky;
+    top:0;
+    
+}
+
+#navbar a {
+    font-size: 20px;
+    color: rgb(175, 168, 168);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    color: rgb(247, 243, 243)
+}
+
+#navbar ul li {
+    float: right;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar img {
+    width: 500px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+}
+
+
+#main {
+    width: 100%;
+}
+
+#content {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+#notification{
+    width: 40%;
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+    border: 2px solid rgb(216, 194, 194);
+    overflow: hidden;
+}
+#notif-heading{
+    font-size: 16pt;
+    font-weight: bolder;
+    color: tomato;
+}
+#footer {
+    clear: both;
+    position: relative;
+    height: auto;
+    padding: 20px;
+    background-color:black;
+    text-align: center;
+}
+
+#footer #head{
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+#footer .font{
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.registration{
+    border: 2px solid beige;
+    padding: 20px;
+    width: 50%;
+    margin: 50px;
+}
+@media screen and (max-width: 500px) {
+    #navbar a {
+      float: none;
+      display: block;
+      padding: 8px;
+    }
+    #navbar img{
+       max-width: 100px;
+    }
+    #content img{
+        height: 200px;
+        max-width: 400px;
+    }
+    #notif-heading{
+        font-size: 11pt;
+    }
+}

@@ -6,26 +6,19 @@ const formParser = bodyParser.urlencoded({extended:false});
 
 
 //rout of homepage
-router.get('/', (req, res, next) =>{
-    res.render('index', {title: 'Step : 1'});
+router.get('/', (req, res) =>{
+    res.render('home');
 });
 
-//get data from client & inserting into databse
-router.put('/payment', formParser, (req, res, next) =>{
-    var data = req.body;
-    console.log(data);
-    res.send({msg: 'this is working'});
-    db = 'INSERT INTO players SET ?';
-    conn.query(db, data, (err, result) =>{
-        if(err) throw err;
-        console.log("one row affected");
-    })
-    res.redirect('/payment');
-})
-//making payment page.
-router.get('/payment', (req, res, next) =>{
-    res.render('payment',{title: 'Step : 2'});
+router.get('/registration', (req, res) =>{
+    res.render('registration');
 });
+
+router.post('/registration',(req, res) =>{
+    console.log(req.body)
+})
+
+
 
 
 module.exports = router;
