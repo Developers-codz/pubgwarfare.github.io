@@ -15,7 +15,23 @@ router.get('/registration', (req, res) =>{
 });
 
 router.post('/registration',(req, res) =>{
-    console.log(req.body)
+    res.redirect('/');
+})
+
+router.get('/tournaments', (req, res) =>{
+    res.render('tournaments');
+})
+
+router.get('/history', (req, res) =>{
+    res.render('history');
+})
+
+router.get('/login', (req, res) =>{
+    res.render('login');
+})
+
+router.post('/login', (req, res) =>{
+    res.redirect('/home');
 })
 
 

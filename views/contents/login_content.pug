@@ -1,0 +1,15 @@
+div(id='content')
+    img(id='pubgLogo' src='pubg1.png')
+    
+    div(class='login')
+        form(action="/login" method="post")
+            label(for="email") Pubg User Name : 
+            input(id="email", type="text", placeholder="Your Answer", name="email")
+            span(id="msg")
+            br
+            br
+            label(for="password") Password : 
+            input(id="password", type="password", placeholder="Your Answer", name="password")
+            br
+            br
+            input(type="submit", value="login")

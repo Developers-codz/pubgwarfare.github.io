@@ -58,15 +58,16 @@ body {
     overflow: auto;
 }
 
-#notification{
+#notification, #tournament, #history{
     width: 40%;
     height: auto;
+    min-height: 600px;
     padding: 20px 10px;
     text-align: center;
     border: 2px solid rgb(216, 194, 194);
     overflow: hidden;
 }
-#notif-heading{
+#notif-heading, #tourn-heading, #history-heading{
     font-size: 16pt;
     font-weight: bolder;
     color: tomato;
@@ -93,7 +94,7 @@ body {
     color: white;
 }
 
-.registration{
+.registration, .login{
     border: 2px solid beige;
     padding: 20px;
     width: 50%;
