@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');
+const app = express();
 
 // connection of mysql
 const connection = require('./public/modules/config');
@@ -7,15 +7,9 @@ const connection = require('./public/modules/config');
 // importing routers.
 const pageRouter = require('./public/modules/pages');
 
-// creating app
-const app = express();
-
-// using static files path
-app.use(express.static(__dirname + 'public'));
-
-// setting view engine & views
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
-app.set('views', 'views');
+app.set('views', './views');
 
 // routers.
 app.use('/', pageRouter);
@@ -32,5 +26,5 @@ app.use((err, req, res, next) =>{
     res.status(err.status || 500);
     res.send(err.message);
 });
-// listning on port
-app.listen(3000);
+
+app.listen(8080);
